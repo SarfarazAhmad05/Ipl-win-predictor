@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏏 IPL Win Predictor & Sports Analytics Platform
 
 A production-ready Machine Learning web application and sports analytics suite built with **Python**, **Streamlit**, and **Scikit-Learn**. The application integrates an existing pre-trained Machine Learning pipeline (`pipe.pkl`) to compute calibrated real-time winning probabilities during 2nd-innings IPL run chases.
@@ -124,3 +125,7 @@ http://localhost:8501
 ```
 
 Use the left sidebar navigation to seamlessly transition between all 6 pages.
+=======
+# Ipl-win-predictor
+An interactive IPL Win Predictor built using Machine Learning and Streamlit. It uses historical IPL match data and a trained ML pipeline to predict match outcomes, analyze team performance, and visualize cricket statistics through an interactive dashboard.
+>>>>>>> faaa6ce39af13b4b4b4ec72fd9806aacae0f85e9
