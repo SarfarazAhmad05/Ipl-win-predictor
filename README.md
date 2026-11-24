@@ -129,6 +129,6 @@ Use the left sidebar navigation to seamlessly transition between all 6 pages.
 # Ipl-win-predictor
 An interactive IPL Win Predictor built using Machine Learning and Streamlit. It uses historical IPL match data and a trained ML pipeline to predict match outcomes, analyze team performance, and visualize cricket statistics through an interactive dashboard.
 
-#🚀Live Demo : https://ipl-win-predictor-bsfkzubxfpxv9xtpm2mrtg.streamlit.app/Home
+# Live Demo : https://ipl-win-predictor-bsfkzubxfpxv9xtpm2mrtg.streamlit.app/Home
 
 Explore IPL match predictions, team analytics, franchise performance and data visualizations.
