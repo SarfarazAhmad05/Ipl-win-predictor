@@ -1,0 +1,286 @@
+/* ==========================================================================
+   IPL WIN PREDICTOR - PREMIUM SPORTS ANALYTICS THEME
+   Modern Dark Glassmorphism, Neon IPL Purple, Electric Blue & Orange Accents
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+    --bg-primary: #080C16;
+    --bg-secondary: #0F172A;
+    --card-bg: rgba(22, 30, 49, 0.75);
+    --card-hover-bg: rgba(30, 41, 67, 0.85);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --accent-purple: #8B5CF6;
+    --accent-purple-glow: rgba(139, 92, 246, 0.35);
+    --accent-blue: #00D2FF;
+    --accent-blue-glow: rgba(0, 210, 255, 0.35);
+    --accent-orange: #FF6B00;
+    --accent-orange-glow: rgba(255, 107, 0, 0.35);
+    --accent-gold: #F59E0B;
+    --accent-green: #10B981;
+    --accent-red: #EF4444;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+}
+
+/* Global Font & Body */
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: var(--text-primary);
+}
+
+.stApp {
+    background: radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 210, 255, 0.06) 0%, transparent 40%),
+                linear-gradient(180deg, #070A12 0%, #0B1120 50%, #070A12 100%) !important;
+    background-attachment: fixed !important;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: #0A0F1D !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-testid="stSidebarNav"] {
+    background-color: transparent !important;
+    padding-top: 1rem;
+}
+
+[data-testid="stSidebarNav"] span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Header & Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--text-primary) !important;
+}
+
+h1 {
+    font-size: 2.2rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.gradient-title {
+    background: linear-gradient(135deg, #FFFFFF 0%, #00D2FF 50%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.gradient-subtitle {
+    background: linear-gradient(135deg, #FF6B00 0%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    margin-bottom: 1.25rem;
+}
+
+.glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* KPI Stat Cards */
+.kpi-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    background: linear-gradient(145deg, rgba(26, 36, 58, 0.6) 0%, rgba(15, 23, 42, 0.7) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+}
+
+.kpi-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.1;
+    margin: 0.35rem 0;
+}
+
+.kpi-label {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.kpi-subtext {
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    font-weight: 500;
+}
+
+/* Custom Probability Display */
+.prob-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.prob-card-batting {
+    background: linear-gradient(145deg, rgba(139, 92, 246, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.35);
+}
+
+.prob-card-bowling {
+    background: linear-gradient(145deg, rgba(255, 107, 0, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(255, 107, 0, 0.35);
+}
+
+.prob-pct {
+    font-size: 3.2rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: -0.03em;
+}
+
+/* Primary Button Styling */
+.stButton > button {
+    background: linear-gradient(135deg, #FF6B00 0%, #E65100 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    letter-spacing: 0.02em !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 2rem !important;
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35) !important;
+    transition: all 0.25s ease !important;
+    width: 100%;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, #FF8533 0%, #FF6B00 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 28px rgba(255, 107, 0, 0.5) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(1px) !important;
+}
+
+/* Form Inputs & Selectboxes */
+div[data-baseweb="select"] > div,
+div[data-baseweb="input"] > div {
+    background-color: rgba(18, 25, 42, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 10px !important;
+    color: var(--text-primary) !important;
+}
+
+div[data-baseweb="select"] > div:hover,
+div[data-baseweb="input"] > div:hover {
+    border-color: var(--accent-purple) !important;
+}
+
+/* Number Input Buttons */
+[data-testid="stNumberInput"] button {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(26, 36, 58, 0.7) !important;
+    color: #FFFFFF !important;
+}
+
+/* Tabs Styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background-color: rgba(15, 23, 42, 0.5);
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 8px 16px;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--accent-purple) !important;
+    color: #FFFFFF !important;
+}
+
+/* Badges */
+.badge-pill {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-purple {
+    background-color: rgba(139, 92, 246, 0.2);
+    color: #A78BFA;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.badge-orange {
+    background-color: rgba(255, 107, 0, 0.2);
+    color: #FF8533;
+    border: 1px solid rgba(255, 107, 0, 0.4);
+}
+
+.badge-blue {
+    background-color: rgba(0, 210, 255, 0.2);
+    color: #38BDF8;
+    border: 1px solid rgba(0, 210, 255, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080C16;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
